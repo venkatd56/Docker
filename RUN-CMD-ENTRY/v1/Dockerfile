@@ -6,5 +6,5 @@ LABEL EMAIL="venkat.tet@gmail.com"
 LABEL Org="Airforce"
 # update Packages and install httpd
 RUN yum update -y && yum install httpd -y
-ENTRYPOINT [ "echo", "Hai" ]
+ENTRYPOINT [ "echo" ]
 CMD [ "hello-world" ]
