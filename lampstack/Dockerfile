@@ -1,4 +1,4 @@
-FROM UBUNTU:18.04
+FROM ubuntu:18.04
 RUN  apt update
 RUN apt install apache2 -y
 RUN apt install php libapache2-mod-php php-mysql php-cli -y
