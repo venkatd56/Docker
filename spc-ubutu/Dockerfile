@@ -3,6 +3,6 @@ RUN apt update && apt install openjdk-8-jdk wget -y
 ENV applpath="/spc"
 ARG dl_loc="https://referenceappkhaja.s3-us-west-2.amazonaws.com/spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar"
 RUN mkdir ${applpath}
-ADD ${dl_loc} /spc/springpetclinic.jar
+ADD ${dl_loc} ${applpath}"/springpetclinic.jar"
 EXPOSE 8080
-CMD ["java", "-jar", ${applpath}]
+CMD ["java", "-jar", "/spc/springpetclinic.jar"]
