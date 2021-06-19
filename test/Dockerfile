@@ -10,4 +10,4 @@ ADD  ${downloadlocation} ${applicationpath}
 # spring pet clinic runs on port 8080
 EXPOSE 8080
 # command to start the application
-CMD ["java",  "-jar",  ${applicationpath} ] 
+CMD [ "java", "-jar", ${applicationpath} ] 
