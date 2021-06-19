@@ -5,4 +5,4 @@ ARG dl_loc="https://referenceappkhaja.s3-us-west-2.amazonaws.com/spring-petclini
 RUN mkdir ${applpath}
 ADD ${dl_loc} ${appl_path}
 EXPOSE 8080
-CMD ["java",  "-jar",  ${applpath} ] 
+CMD ["java", "-jar", ${applpath} ] 
