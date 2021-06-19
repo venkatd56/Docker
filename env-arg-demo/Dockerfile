@@ -9,4 +9,4 @@ ENV appl_path='/springpetclinic.jar'
 ARG dl_loc='https://referenceappkhaja.s3-us-west-2.amazonaws.com/spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar'
 ADD ${dl_loc} ${appl_path}
 EXPOSE 8080
-CMD [ "java", "-jar", "${appl_path}" ]
+CMD [ "java", "-jar", ${appl_path} ]
