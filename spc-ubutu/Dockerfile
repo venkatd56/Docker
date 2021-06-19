@@ -5,5 +5,5 @@ ARG dl_loc="https://referenceappkhaja.s3-us-west-2.amazonaws.com/spring-petclini
 RUN mkdir ${applpath}
 ADD ${dl_loc} ${applpath}"/springpetclinic.jar"
 EXPOSE 8080
-HEALTHCHECK --internal=1m --timeout=2s --retries=3 CMD curl -f http://localhost/ || exit 1
+HEALTHCHECK --interval=1m --timeout=2s --retries=3 CMD curl -f http://localhost/ || exit 1
 CMD ["java", "-jar", ${applpath}"/springpetclinic.jar"]
